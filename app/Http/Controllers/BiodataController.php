@@ -12,4 +12,17 @@ class BiodataController extends Controller
 
         return view('biodata', ['biodata' => $biodata]);
     }
+
+    public function tambah() {
+        return view('tambahBiodata');
+    }
+
+    public function simpanBiodata(Request $request) {
+        Biodata::create([
+            'nama' => $request->txNama,
+            'alamat' => $request->txAlamat
+        ]);
+
+        return redirect('/biodata');
+    }
 }

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Biodata extends Model
 {
+    public $timestamps = false;
     use HasFactory;
     protected $table = "tb_biodata"; // tambahkan ini
+    protected $fillable = ["nama", "alamat"];
 }

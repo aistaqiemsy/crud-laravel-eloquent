@@ -10,6 +10,8 @@ Route::get('/', function () {
 });
 
 Route::get('/biodata', [BiodataController::class, 'index']); // tambah route ini
+Route::get('/biodata/tambahBiodata', [BiodataController::class, 'tambah']);
+Route::post('/biodata/tambahBiodata', [BiodataController::class, 'simpanBiodata']);
 
 
 
