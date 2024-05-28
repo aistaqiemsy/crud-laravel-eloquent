@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/gambar/simpanGambar', [GambarController::class, 'uploadGambar']);
+Route::get('/biodata', [BiodataController::class, 'index']); // tambah route ini
 
-Route::get('/biodata', [BiodataController::class, 'index']);
+
+
+
+
+Route::post('/gambar/simpanGambar', [GambarController::class, 'uploadGambar']);
