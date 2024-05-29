@@ -1,5 +1,5 @@
 <form action="/biodata/tambahBiodata" method="post">
-    @csrf
+    @csrf 
     <table>
         <tr>
             <td>Nama</td>

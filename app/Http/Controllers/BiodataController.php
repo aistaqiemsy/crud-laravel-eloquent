@@ -25,4 +25,19 @@ class BiodataController extends Controller
 
         return redirect('/biodata');
     }
+
+    public function tampilEdit($id) {
+        $biodata = Biodata::find($id);
+
+        return view('tampilEdit', ['biodata' => $biodata]);
+    }
+
+    public function perbaruiData($id, Request $request) {
+        $biodata = Biodata::find($id);
+        $biodata->nama = $request->txUpNama;
+        $biodata->alamat = $request->txUpAlamat;
+        $biodata->save();
+
+        return redirect('biodata');
+    }
 }
