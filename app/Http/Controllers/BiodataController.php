@@ -40,4 +40,11 @@ class BiodataController extends Controller
 
         return redirect('biodata');
     }
+
+    public function hapusData($id) {
+        $biodata = Biodata::find($id);
+        $biodata->delete();
+
+        return redirect('/biodata');
+    }
 }
